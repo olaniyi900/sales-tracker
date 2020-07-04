@@ -1,14 +1,20 @@
 import React from 'react';
-import Button from "@material-ui/core/Button"
+import NavBar from './components/navbar/NavBar'
+import DispayTable from './components/table/DisplayTable'
+import Container from '@material-ui/core/Container';
+import SaleForm from './components/forms/SaleForm'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       <h1>Sales tracker</h1>
-       <Button color="primary">Hello World</Button>
-      </header>
+      <NavBar />
+      <h3 style={{ textAlign:'center'}}>Sales Tracker</h3>
+      <Container >
+        <SaleForm />
+        <DispayTable />
+      </Container>
+      
     </div>
   );
 }
