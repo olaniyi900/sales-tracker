@@ -1,8 +1,5 @@
 import React from 'react';
-// import 'rsuite/lib/styles/index.less';
-import { Message } from 'rsuite';
-import 'rsuite/dist/styles/rsuite-default.css';
-
+import Button from "@material-ui/core/Button"
 import './App.css';
 
 function App() {
@@ -10,13 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
        <h1>Sales tracker</h1>
-       <Message 
-        type="success"
-        title="Success"
-        description={
-          <p>Hello this is a success message</p>
-        }
-       />
+       <Button color="primary">Hello World</Button>
       </header>
     </div>
   );
