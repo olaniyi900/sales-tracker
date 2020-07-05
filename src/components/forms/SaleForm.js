@@ -19,17 +19,7 @@ class SalesForm extends Component{
         })
     }
 
-    handleSubmit = (event) => {
-        
-        console.log(this.state);
-        this.setState({ 
-            serial_no: 1,
-            item: '',
-            price: '',
-            quantity:0,
-            sales_person:'',
-        })
-    }
+   
 
     render(){
         let inputStyle = {
@@ -38,6 +28,8 @@ class SalesForm extends Component{
 
         return (
 
+            <div>
+                <p>Input Sales Data</p>
             <form >
                 
                 <div style={inputStyle}>
@@ -86,9 +78,9 @@ class SalesForm extends Component{
                     />
                 </div>
                 
-                < Button style={inputStyle} onClick={ this.handleSubmit }>Submit</Button>
+                < Button style={inputStyle} onClick={ () => this.props.handleSubmit(this.state) }>Submit</Button>
             </form>
-
+            </div>
         );
     }
 }

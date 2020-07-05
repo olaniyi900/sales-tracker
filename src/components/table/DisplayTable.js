@@ -7,31 +7,33 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-const DisplayTable = () => {
+const DisplayTable = (props) => {
+        
+
     return (
         <TableContainer component={Paper}>
-      <Table size="small" aria-label="a dense table">
+        <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Serail Number</TableCell>
+            <TableCell align="right">Item Description</TableCell>
+            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Quantity</TableCell>
+            <TableCell align="right">Sales Person</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          
-            <TableRow >
-              <TableCell component="th" scope="row">
-                a
-              </TableCell>
-              <TableCell align="right">b</TableCell>
-              <TableCell align="right">c</TableCell>
-              <TableCell align="right">d</TableCell>
-              <TableCell align="right">e</TableCell>
+          { props.data.map( d =>
+            <TableRow key={d.i}>
+     <TableCell >{ d.serial_no }</TableCell> 
+     <TableCell >{ d.item }</TableCell> 
+     <TableCell >{ d.price }</TableCell> 
+     <TableCell >{ d.quantity }</TableCell> 
+     <TableCell >{ d.sales_person }</TableCell> 
+             
             </TableRow>
-          
+          )
+          }
         </TableBody>
       </Table>
     </TableContainer>

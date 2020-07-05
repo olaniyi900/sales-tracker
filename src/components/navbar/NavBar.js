@@ -8,13 +8,10 @@ const NavBar = () => {
         <div>
             <AppBar position="static">
                 <Tabs 
-                    // indicatorColor="primary"
-                    // textColor="primary"
+                    
                     variant="fullWidth">
-                    <Tab label="Item One"></Tab>
-                    <Tab label="Item Two"></Tab>
-                    <Tab label="Item Three"></Tab>
-
+                    <Tab label="Sales Tracker"></Tab>
+                    
 
                 </Tabs>
             </AppBar>
