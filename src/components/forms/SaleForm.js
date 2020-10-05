@@ -71,7 +71,7 @@ class SalesForm extends Component{
                 <div style={inputStyle}>
                 <TextField 
                     type="text"  
-                    label="Sales Person"  
+                    label="Sales Persons"  
                     name='sales_person' 
                     onChange={ this.handleChange } 
                     value={ this.state.sales_person } 
